@@ -36,7 +36,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem "rspec-rails", ">= 2.0.1"
-  gem "cucumber-rails", ">= 0.3.2"
+#  gem "cucumber-rails", ">= 0.3.2"
   gem "capybara", "= 0.4.0"
   gem 'ruby-debug'
   gem "launchy", ">= 0.3.7"
@@ -46,7 +46,7 @@ group :production do
   gem 'foreman'
   gem 'mysql2'
   gem 'unicorn'
-  gem 'therubyracer'
+#  gem 'therubyracer'
   gem 'newrelic_rpm'
 end
 
