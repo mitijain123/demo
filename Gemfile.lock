@@ -249,6 +249,8 @@ GEM
     kaminari (0.12.4)
       rails (>= 3.0.0)
     kgio (2.6.0)
+    launchy (2.0.5)
+      addressable (~> 2.2.6)
     linecache (0.46)
       rbx-require-relative (> 0.0.4)
     mail (2.3.0)
@@ -365,6 +367,7 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (!= 1.3.0, ~> 1.1)
+    sqlite3 (1.3.4)
     state_machine (1.0.1)
     stringex (1.0.3)
     term-ansicolor (1.0.6)
@@ -401,6 +404,7 @@ DEPENDENCIES
   factory_girl_rails
   foreman
   hoptoad_notifier
+  launchy (>= 0.3.7)
   mysql2
   newrelic_rpm
   rails (= 3.1.0)
@@ -418,5 +422,6 @@ DEPENDENCIES
   spree_social!
   spree_static_content!
   spree_wishlist!
+  sqlite3
   uglifier
   unicorn
