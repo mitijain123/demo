@@ -49,5 +49,5 @@ group :production do
 #  gem 'therubyracer'
   gem 'newrelic_rpm'
 end
-gem 'formtastic'
+
 gem 'deface', :git => 'git://github.com/railsdog/deface.git'
