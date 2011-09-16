@@ -39,7 +39,7 @@ end
 #  gem "cucumber-rails", ">= 0.3.2"
   gem "capybara", "= 0.4.0"
   gem 'ruby-debug'
-  gem "launchy", ">= 0.3.7"
+#  gem "launchy", ">= 0.3.7"
 #end
 
 group :production do
