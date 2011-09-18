@@ -12,8 +12,8 @@ gem 'heroku'
 
 gem 'spree', :git => 'git://github.com/spree/spree.git'
 
-gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git', :ref => '0130f74b843f960bd353'
-gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git', :ref => '0f6e345240c23e427e34'
+gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git'
+gem "spree_related_products", "~> 3.0.2"
 gem 'spree_social', :git => 'git://github.com/spree/spree_social.git'
 gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git'
 gem 'spree_email_to_friend', :git => 'git://github.com/spree/spree_email_to_friend.git'
@@ -26,7 +26,6 @@ gem 'active_shipping', :git => 'git://github.com/Shopify/active_shipping.git', :
 gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git'
 
 gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
-gem 'therubyracer', :git => 'git://github.com/cowboyd/therubyracer.git'
 gem 'capistrano'
 
 group :assets do
@@ -51,7 +50,7 @@ group :production do
   gem 'foreman'
   gem 'mysql2'
   gem 'unicorn'
-#  gem 'therubyracer'
+  gem 'therubyracer'
   gem 'newrelic_rpm'
 end
 
