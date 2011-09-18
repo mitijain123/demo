@@ -48,7 +48,7 @@ group :production do
   gem 'foreman'
   gem 'mysql2'
   gem 'unicorn'
-  gem 'therubyracer'
+#  gem 'therubyracer'
   gem 'newrelic_rpm'
 end
 
