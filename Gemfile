@@ -17,6 +17,7 @@ gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git'
 gem 'spree_email_to_friend', :git => 'git://github.com/spree/spree_email_to_friend.git'
 
 gem 'spree_static_content', :git => 'git://github.com/spree/spree_static_content.git'
+gem 'formtastic', :git => 'git://github.com/justinfrench/formtastic.git'
 gem 'spree_editor', :git => 'git://github.com/spree/spree_editor.git'
 gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git'
 gem 'active_shipping', :git => 'git://github.com/Shopify/active_shipping.git', :ref => '6be70c68574a9e420493' #only required until gem release 0.9.14 or later 
@@ -32,11 +33,12 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'heroku'
   gem 'sqlite3'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem "rspec-rails", ">= 2.0.1"
-#  gem "cucumber-rails", ">= 0.3.2"
+  gem "cucumber-rails", ">= 0.3.2"
   gem "capybara", "= 0.4.0"
   gem 'ruby-debug'
   gem "launchy", ">= 0.3.7"
@@ -46,7 +48,7 @@ group :production do
   gem 'foreman'
   gem 'mysql2'
   gem 'unicorn'
-#  gem 'therubyracer'
+  gem 'therubyracer'
   gem 'newrelic_rpm'
 end
 
