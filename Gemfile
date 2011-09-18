@@ -4,9 +4,11 @@ source 'http://rubygems.org'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'rails', '3.1.0'
+gem 'pg'
 
 gem 'aws-s3'
 gem 'hoptoad_notifier'
+gem 'heroku'
 
 gem 'spree', :git => 'git://github.com/spree/spree.git'
 
