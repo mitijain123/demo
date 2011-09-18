@@ -26,6 +26,7 @@ gem 'active_shipping', :git => 'git://github.com/Shopify/active_shipping.git', :
 gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git'
 
 gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
+gem "spree_mail", "~> 0.40.0.4", :git => 'git://github.com/citrus/spree_mail.git'
 gem 'capistrano'
 
 group :assets do
