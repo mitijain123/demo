@@ -26,6 +26,7 @@ gem 'active_shipping', :git => 'git://github.com/Shopify/active_shipping.git', :
 gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git'
 
 gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
+gem 'therubyracer', :git => 'git://github.com/cowboyd/therubyracer.git'
 gem 'capistrano'
 
 group :assets do

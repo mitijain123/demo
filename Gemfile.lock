@@ -7,6 +7,13 @@ GIT
       activesupport (>= 2.3.5)
 
 GIT
+  remote: git://github.com/cowboyd/therubyracer.git
+  revision: 6d7e6f6cd285aa71f7644d2e5020989cb06ed9b3
+  specs:
+    therubyracer (0.9.4)
+      libv8 (~> 3.3.10)
+
+GIT
   remote: git://github.com/justinfrench/formtastic.git
   revision: a77267c1888c38ce2932abbecdae93dcb010e8c2
   specs:
@@ -273,6 +280,7 @@ GEM
     kgio (2.6.0)
     launchy (2.0.5)
       addressable (~> 2.2.6)
+    libv8 (3.3.10.2)
     linecache (0.46)
       rbx-require-relative (> 0.0.4)
     mail (2.3.0)
@@ -453,5 +461,6 @@ DEPENDENCIES
   spree_static_content!
   spree_wishlist!
   sqlite3
+  therubyracer!
   uglifier
   unicorn
