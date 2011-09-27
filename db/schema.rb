@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110906181503) do
+ActiveRecord::Schema.define(:version => 20110927181632) do
 
   create_table "activators", :force => true do |t|
     t.string   "description"
@@ -123,6 +123,15 @@ ActiveRecord::Schema.define(:version => 20110906181503) do
     t.integer  "address_id"
     t.string   "gateway_customer_profile_id"
     t.string   "gateway_payment_profile_id"
+  end
+
+  create_table "emails", :force => true do |t|
+    t.string   "token"
+    t.text     "to"
+    t.string   "subject"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "gateways", :force => true do |t|
@@ -339,7 +348,7 @@ ActiveRecord::Schema.define(:version => 20110906181503) do
   add_index "product_scopes", ["product_group_id"], :name => "index_product_scopes_on_product_group_id"
 
   create_table "products", :force => true do |t|
-    t.string   "name",                                                              :null => false
+    t.string   "name",                                               :default => "", :null => false
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -350,7 +359,7 @@ ActiveRecord::Schema.define(:version => 20110906181503) do
     t.datetime "deleted_at"
     t.string   "meta_description"
     t.string   "meta_keywords"
-    t.integer  "count_on_hand",                                      :default => 0, :null => false
+    t.integer  "count_on_hand",                                      :default => 0,  :null => false
     t.decimal  "rrp",                  :precision => 8, :scale => 2
   end
 
@@ -512,12 +521,13 @@ ActiveRecord::Schema.define(:version => 20110906181503) do
     t.integer "country_id"
   end
 
-  create_table "stylesheets", :force => true do |t|
+  create_table "subscribers", :force => true do |t|
+    t.string   "token"
     t.string   "name"
-    t.text     "css"
+    t.string   "email"
+    t.datetime "unsubscribed_at"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "theme_id"
   end
 
   create_table "tax_categories", :force => true do |t|
@@ -543,10 +553,10 @@ ActiveRecord::Schema.define(:version => 20110906181503) do
   end
 
   create_table "taxons", :force => true do |t|
-    t.integer  "taxonomy_id",                            :null => false
+    t.integer  "taxonomy_id",                      :null => false
     t.integer  "parent_id"
-    t.integer  "position",            :default => 0
-    t.string   "name",                                   :null => false
+    t.integer  "position",          :default => 0
+    t.string   "name",                             :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "permalink"
@@ -557,27 +567,11 @@ ActiveRecord::Schema.define(:version => 20110906181503) do
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
     t.text     "description"
-    t.boolean  "hidden",              :default => false
-    t.boolean  "disabled",            :default => false
-    t.string   "short_name"
-    t.boolean  "homepage",            :default => false
-    t.string   "display_style"
-    t.string   "banner_file_name"
-    t.string   "banner_content_type"
-    t.integer  "banner_file_size"
-    t.datetime "banner_updated_at"
   end
 
   add_index "taxons", ["parent_id"], :name => "index_taxons_on_parent_id"
   add_index "taxons", ["permalink"], :name => "index_taxons_on_permalink"
   add_index "taxons", ["taxonomy_id"], :name => "index_taxons_on_taxonomy_id"
-
-  create_table "themes", :force => true do |t|
-    t.string   "name"
-    t.boolean  "active"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "tokenized_permissions", :force => true do |t|
     t.integer  "permissable_id"
@@ -636,7 +630,7 @@ ActiveRecord::Schema.define(:version => 20110906181503) do
 
   create_table "variants", :force => true do |t|
     t.integer  "product_id"
-    t.string   "sku",                                                            :null => false
+    t.string   "sku",                                         :default => "",    :null => false
     t.decimal  "price",         :precision => 8, :scale => 2,                    :null => false
     t.decimal  "weight",        :precision => 8, :scale => 2
     t.decimal  "height",        :precision => 8, :scale => 2
@@ -650,20 +644,6 @@ ActiveRecord::Schema.define(:version => 20110906181503) do
   end
 
   add_index "variants", ["product_id"], :name => "index_variants_on_product_id"
-
-  create_table "view_overrides", :force => true do |t|
-    t.string   "virtual_path"
-    t.string   "name"
-    t.string   "replace_with"
-    t.string   "target"
-    t.string   "selector"
-    t.string   "closing_selector"
-    t.boolean  "disabled"
-    t.text     "replacement"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "theme_id"
-  end
 
   create_table "wished_products", :force => true do |t|
     t.integer  "variant_id"
