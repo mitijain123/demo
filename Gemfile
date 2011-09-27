@@ -24,7 +24,7 @@ gem 'spree_editor', :git => 'git://github.com/spree/spree_editor.git'
 gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git'
 gem 'active_shipping', :git => 'git://github.com/Shopify/active_shipping.git', :ref => '6be70c68574a9e420493' #only required until gem release 0.9.14 or later 
 gem 'spree_active_shipping', :git => 'git://github.com/spree/spree_active_shipping.git'
-
+gem 'will_paginate'
 gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
 gem "spree_mail", "~> 0.40.0.4", :git => 'git://github.com/citrus/spree_mail.git'
 gem 'capistrano'
